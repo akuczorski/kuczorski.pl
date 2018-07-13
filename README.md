@@ -1,2 +1,0 @@
-# kuczorski.pl
-Personal webPage
