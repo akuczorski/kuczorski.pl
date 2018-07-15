@@ -2,7 +2,7 @@ title:             Arkadiusz Kuczorski
 email:             arkadiusz@kuczorski.pl
 description:       The main drivers behind cloud computing (r)evolution
 author:            Arkadiusz Kuczorski
-baseurl:           "/kuczorski.pl"
+baseurl:           ""
 url:               "https://kuczorski.pl"
 
 # Social Profiles
