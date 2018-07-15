@@ -1,4 +1,4 @@
-This repository holds content of http://kuczorski.pl website
+This repository holds content of https://kuczorski.pl website
 
 ## Template Copyright and License 
 
