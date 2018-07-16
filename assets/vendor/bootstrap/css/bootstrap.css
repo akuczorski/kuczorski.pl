@@ -6220,10 +6220,6 @@ button.bg-dark:focus {
 
 .rounded-circle {
   border-radius: 50% !important;
-  display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
 }
 
 .rounded-0 {
