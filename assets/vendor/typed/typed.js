@@ -804,7 +804,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  /**
 	   * @property {number} typeSpeed type speed in milliseconds
 	   */
-	  typeSpeed: 0,
+	  typeSpeed: 10,
 	
 	  /**
 	   * @property {number} startDelay time before typing starts in milliseconds
@@ -829,7 +829,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  /**
 	   * @property {number} backDelay time before backspacing in milliseconds
 	   */
-	  backDelay: 700,
+	  backDelay: 800,
 	
 	  /**
 	   * @property {boolean} fadeOut Fade out instead of backspace
@@ -844,8 +844,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @property {boolean} loop loop strings
 	   * @property {number} loopCount amount of loops
 	   */
-	  loop: false,
-	  loopCount: Infinity,
+	  loop: true,
+	  loopCount: 3,
 	
 	  /**
 	   * @property {boolean} showCursor show cursor
