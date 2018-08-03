@@ -10,9 +10,7 @@ background: '/img/bg-index.jpg'
     <div id="typed-strings">
       <span>My name is Arkadiusz Kuczorski.</span>
       <p>I'm cloud enthusiast, </p>
-      <p>CEE regional manager </p>
-      <p> and Chief Cloud Officer at Oracle.</p>
-      <p>I'm happy you are here. </p>
+      <p>with experience at high profie companies</p>
       <p>Please use links in the footnote </p>
       <p>or fill out contact form to reach me out.</p>
       <p>You will find more content here soon.</p>
@@ -26,6 +24,83 @@ background: '/img/bg-index.jpg'
  </div>
 
 
+
+    <section>
+      <h2>Single String</h2>
+      <h3 id="example1"></h3>
+    </section>
+
+    <section>
+      <h2>Multiple Strings</h2>
+      <h3 id="example2"></h3>
+    </section>
+
+    <section>
+      <h2>HTML, Delete &amp; Replace Each Other</h2>
+      <h3 id="example3"></h3>
+    </section>
+
+    <section>
+      <h2>Looping Strings</h2>
+      <h3 id="example4"></h3>
+    </section>
+
+    <section>
+      <h2>Companion Functions</h2>
+      <h3 id="example5"></h3>
+    </section>
+
+    <section>
+      <h2>Hard-Coded String</h2>
+      <h3 id="example6"><!-- This comment should be removed automatically. Don't worry about it being typed. -->This string is hard-coded!</h3>
+    </section>
+
+    <script src="dist/typeit.js"></script>
+
+		<script>
+      window.instance = new TypeIt('#example1', {
+        speed: 50,
+        strings: 'Just a simple string.',
+        cursorChar: '<strong>CUSTOM CURSOR!</strong>'
+      });
+      new TypeIt('#example2', {
+        speed: 50,
+        strings: ['This is my first example.', 'It has several strings!'],
+        cursor: false,
+        startDelay: 3000
+      });
+      new TypeIt('#example3', {
+        speed: 50,
+        strings: [
+          'This is my <strong>second</strong> example.',
+          'This should <strong>replace</strong> the second string!'
+        ],
+        breakLines: false
+      });
+      new TypeIt('#example4', {
+        speed: 50,
+        strings: ['My first string.', 'My second string.'],
+        loop: true
+      });
+      new TypeIt('#example5', {
+        speed: 100
+      })
+        .type('Here\'s my first sting.')
+        .pause(500)
+        .delete(4)
+        .pause(500)
+        .type('ring.')
+        .pause(500)
+        .delete()
+        .pause(500)
+        .options({
+          speed: 25
+        })
+        .type('And here it is faster!');
+      new TypeIt('#example6', {
+        autoStart: false
+      });
+		</script>
 <!-- <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">This is still under construction</h1>
