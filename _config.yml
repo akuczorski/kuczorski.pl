@@ -1,4 +1,4 @@
-title:             Arkadiusz Kuczorski
+title:             kuczorski.pl
 email:             arkadiusz@kuczorski.pl
 description:       Two drivers behind cloud computing (r)evolution
 author:            Arkadiusz Kuczorski
@@ -10,6 +10,7 @@ twitter_username:  akuczorski
 github_username:   akuczorski
 facebook_username: arkadiusz.kuczorski
 linkedin_username: arkadiusz-kuczorski-7b70601
+stack-overflow_username: arkadiusz-kuczorski
 
 # Build settings
 markdown:          kramdown
