@@ -5,6 +5,9 @@ author:            Arkadiusz Kuczorski
 baseurl:           ""
 url:               "https://kuczorski.pl"
 
+# Reading time
+words_per_minute:  170
+
 # Social Profiles
 twitter_username:  akuczorski
 github_username:   akuczorski
