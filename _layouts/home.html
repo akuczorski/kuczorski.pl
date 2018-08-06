@@ -36,9 +36,8 @@ layout: default
         {% for post in site.posts limit : 5 %}
 <br><br>
 <div class="float-left">
-{% include read-time.html content=rt_page1 %}
-{{ post.excerpt }} 
-{{ rt_page1 }} </div>
+{% include read-time.html %}
+</div>
           <article class="post-preview">
             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
               <h2 class="post-title">{{ post.title }}</h2>
