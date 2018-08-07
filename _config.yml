@@ -29,6 +29,10 @@ plugins:
 
 permalink: /:categories/:title/
 
+sass:
+    style: :compressed
+
+
 jekyll-archives:
   enabled:
   - tags
