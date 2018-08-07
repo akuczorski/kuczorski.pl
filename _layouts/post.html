@@ -14,16 +14,9 @@ layout: default
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-heading">
           <h1>{{ page.title }}</h1>
+          {% include category.html %}
       
-            {% if post %}
-    {% assign categories = post.categories %}
-  {% else %}
-    {% assign categories = page.categories %}
-  {% endif %}
-  {% for category in categories %}
-  <span class="meta"><h6><a href="{{site.baseurl}}/{{category|slugize}}">#{{category}}</a></h6>
-  {% unless forloop.last %}&nbsp;{% endunless %}
-  {% endfor %}
+      
 </span>
           {% if page.subtitle %}
           <h2 class="subheading">{{ page.subtitle }}</h2>
