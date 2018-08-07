@@ -1,0 +1,7 @@
+<p class="post-meta float-right">Posted by<a class="text-muted" href="/contact">
+      {% if post.author %}
+        {{ post.author }}
+      {% else %}
+        {{ site.author }}
+      {% endif %}</a>
+      on {{ post.date | date: '%B %d, %Y' }}</p><br>

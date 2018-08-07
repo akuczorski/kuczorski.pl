@@ -1,17 +1,20 @@
 ---
 layout: page
-title: Posts
-background: '/img/bg-post.jpg'
+title: Business
+background: '/img/business.jpg'
+categories: business
 ---
 
-
-
+<!-- {% assign post_category = "#" %} -->
+    <!--   {{ post_category }} -->
       
 
-{% for post in paginator.posts %}
+{% for post in site.categories.business %}
+
 
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+     
       <br>
       <div class="float-left">
       {% include read-time.html %}
@@ -33,6 +36,8 @@ background: '/img/bg-post.jpg'
       {% endif %}
     </a>
     {% include post-author.html %}
+    
+      
   </article>
 
   <hr>

@@ -4,7 +4,7 @@ description:       Two drivers behind cloud computing (r)evolution
 author:            Arkadiusz Kuczorski
 baseurl:           ""
 url:               "https://kuczorski.pl"
-rt_page1:           ""
+
 
 # Reading time
 words_per_minute:  170
@@ -25,6 +25,19 @@ paginate_path:     "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-archives
 
-# Theme
-# theme: jekyll-theme-awesome
+permalink: /:categories/:title/
+
+jekyll-archives:
+  enabled:
+  - tags
+  layout: 'archive'
+  layouts:
+    tag: tag-archive-layout
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'

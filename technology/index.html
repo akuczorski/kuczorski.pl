@@ -1,27 +1,41 @@
 ---
 layout: page
-title: Technology Posts
-background: '/img/bg-post.jpg'
+title: Technology
+background: '/img/technology.jpg'
+categories: technology
 ---
 
-{% for post in paginator.posts %}
+<!-- {% assign post_category = "#" %} -->
+    <!--   {{ post_category }} -->
+      
+
+{% for post in site.categories.technology %}
 
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+      
+      <br>
+      <div class="float-left">
+      {% include read-time.html %}
+      </div>
       <h2 class="post-title">{{ post.title }}</h2>
+      {% if post %}
+    {% assign categories = post.categories %}
+  {% else %}
+    {% assign categories = page.categories %}
+  {% endif %}
+  {% for category in categories %}
+  <h6><a href="{{site.baseurl}}/{{category|slugize}}">#{{category}}</a></h6>
+  {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
       {% if post.subtitle %}
       <h3 class="post-subtitle">{{ post.subtitle }}</h3>
       {% else %}
       <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
       {% endif %}
     </a>
-    <p class="post-meta">Posted by
-      {% if post.author %}
-        {{ post.author }}
-      {% else %}
-        {{ site.author }}
-      {% endif %}
-      on {{ post.date | date: '%B %d, %Y' }}</p>
+    {% include post-author.html %}
+     
   </article>
 
   <hr>
@@ -32,7 +46,7 @@ background: '/img/bg-post.jpg'
 {% if paginator.total_pages > 1 %}
 
   <div class="clearfix">
-
+{% if post.title != 'Business' and post.title != 'Inspirations' and post.title != 'Technology' %}
     {% if paginator.previous_page %}
       <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer<span class="d-none d-md-inline"> Posts</span></a>
     {% endif %}
@@ -40,7 +54,8 @@ background: '/img/bg-post.jpg'
     {% if paginator.next_page %}
       <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
     {% endif %}
-
+{% endif %}
   </div>
+}
 
 {% endif %}

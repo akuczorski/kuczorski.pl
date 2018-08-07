@@ -1,17 +1,19 @@
 ---
 layout: page
-title: Posts
-background: '/img/bg-post.jpg'
+title: Inspirations
+background: '/img/inspirations.jpg'
+categories: inspirations
 ---
 
-
-
+<!-- <div class="cursive" style="color: #000; font-style:italic; font-size: 100;">This category contains articles inspirational to me - enjoy ! </div> -->
       
 
-{% for post in paginator.posts %}
+{% for post in site.categories.inspirations %}
+
 
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+      
       <br>
       <div class="float-left">
       {% include read-time.html %}
@@ -33,6 +35,7 @@ background: '/img/bg-post.jpg'
       {% endif %}
     </a>
     {% include post-author.html %}
+      
   </article>
 
   <hr>

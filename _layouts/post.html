@@ -14,11 +14,22 @@ layout: default
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-heading">
           <h1>{{ page.title }}</h1>
+      
+            {% if post %}
+    {% assign categories = post.categories %}
+  {% else %}
+    {% assign categories = page.categories %}
+  {% endif %}
+  {% for category in categories %}
+  <span class="meta"><h6><a href="{{site.baseurl}}/{{category|slugize}}">#{{category}}</a></h6>
+  {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
+</span>
           {% if page.subtitle %}
           <h2 class="subheading">{{ page.subtitle }}</h2>
           {% endif %}
-          <span class="meta">Posted by
-            <a href="#">Arkadiusz Kuczorski</a>
+          <span class="meta float-right">Posted by
+            <a href="/contact">Arkadiusz Kuczorski</a>
             on {{ page.date | date: '%B %d, %Y' }}</span>
         </div>
       </div>
@@ -29,11 +40,12 @@ layout: default
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
+      {% include read-time.html %} <br>
 
       {{ content }}
 
       <hr>
-
+{% if post.title != 'Business' and post.title != 'Inspirations' and post.title != 'Technology' %}
       <div class="clearfix">
 
         {% if page.previous.url %}
@@ -44,7 +56,10 @@ layout: default
         {% endif %}
 
       </div>
-
+{% endif %}
     </div>
   </div>
 </div>
+
+
+
