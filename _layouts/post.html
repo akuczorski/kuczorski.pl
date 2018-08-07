@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 
 <!-- Page Header -->
@@ -34,7 +35,11 @@ layout: default
 
       {{ content }}
 
+      {% include disqus.html %}
+
+
       <hr>
+
       <div class="clearfix">
 
         {% if page.previous.url %}
@@ -48,6 +53,5 @@ layout: default
     </div>
   </div>
 </div>
-
 
 
