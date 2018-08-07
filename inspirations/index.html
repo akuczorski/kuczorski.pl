@@ -8,7 +8,7 @@ background: '/img/inspirations.jpg'
 
 {% for post in site.categories.inspirations %}
 <div class="float-left">
-  {% include read-time.html %}
+  <!-- {% include read-time.html %} -->
 </div>
 <br>
   <article class="post-preview">
@@ -21,6 +21,7 @@ background: '/img/inspirations.jpg'
       {% endif %}
     </a>
     {% include category.html %}
+    <div class="float-right">{% include read-time-post.html %}</div><br>
     <small>{% include post-author.html %}</small>
       
   </article>

@@ -37,7 +37,6 @@ layout: default
         
 <br><br>
   <div class="float-left">
-  {% include read-time.html %}
   </div>
           <article class="post-preview">
             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -50,6 +49,7 @@ layout: default
               {% endif %}
             </a>
             {% include category.html %}
+            <div class="float-right">{% include read-time-post.html %}</div><br>
             <small>{% include post-author.html %}</small>
           </article><br>
           </article>

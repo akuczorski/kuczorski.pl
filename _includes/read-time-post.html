@@ -1,0 +1,8 @@
+{% assign words = post.content | strip_html | number_of_words %}
+  <i class="fa fa-clock-o"></i>
+  Reading time:
+  {% if words < 170 %}
+    ~1 minute
+  {% else %}
+    {{ words | divided_by:site.words_per_minute }} minutes
+  {% endif %}
