@@ -11,14 +11,11 @@ categories: business
 
 {% for post in site.categories.business %}
 
-
+<div class="float-left">
+  {% include read-time.html %}
+</div>
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-     
-      <br>
-      <div class="float-left">
-      {% include read-time.html %}
-      </div>
       <h2 class="post-title">{{ post.title }}</h2>
       {% if post.subtitle %}
       <h3 class="post-subtitle">{{ post.subtitle }}</h3>
