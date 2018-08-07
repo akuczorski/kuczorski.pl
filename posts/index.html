@@ -7,11 +7,11 @@ background: '/img/bg-post.jpg'
 
 
       
-
 {% for post in paginator.posts %}
 <div class="float-left">
   {% include read-time.html %}
 </div>
+<br>
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
       <h2 class="post-title">{{ post.title }}</h2>

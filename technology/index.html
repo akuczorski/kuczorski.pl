@@ -2,17 +2,15 @@
 layout: page
 title: Technology
 background: '/img/technology.jpg'
-categories: technology
 ---
 
-<!-- {% assign post_category = "#" %} -->
-    <!--   {{ post_category }} -->
       
 
 {% for post in site.categories.technology %}
 <div class="float-left">
   {% include read-time.html %}
 </div>
+<br>
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
       <h2 class="post-title">{{ post.title }}</h2>

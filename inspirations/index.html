@@ -2,17 +2,15 @@
 layout: page
 title: Inspirations
 background: '/img/inspirations.jpg'
-categories: inspirations
 ---
 
-<!-- <div class="cursive" style="color: #000; font-style:italic; font-size: 100;">This category contains articles inspirational to me - enjoy ! </div> -->
       
 
 {% for post in site.categories.inspirations %}
-
 <div class="float-left">
   {% include read-time.html %}
 </div>
+<br>
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
       <h2 class="post-title">{{ post.title }}</h2>
