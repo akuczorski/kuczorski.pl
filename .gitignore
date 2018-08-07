@@ -2,5 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 src
-_posts.drafts
-_posts.orig
+_posts.drafts/
+_posts.orig/
+
