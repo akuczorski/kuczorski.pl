@@ -61,6 +61,24 @@ header.masthead {
       margin: 10px 0 30px;
       @include sans-serif-font;
     }
+    .subheading-white {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px 0 30px;
+      @include sans-serif-font;
+      a {
+        color: $white;
+      }
+    }
+    .subheading-grey {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px 0 30px;
+      @include sans-serif-font;
+      a {
+        color: $gray-400;
+      }
+    }
     .meta {
       font-size: 20px;
       font-weight: 300;

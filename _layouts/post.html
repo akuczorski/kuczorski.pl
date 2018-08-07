@@ -14,16 +14,13 @@ layout: default
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-heading">
           <h1>{{ page.title }}</h1>
-          {% include category.html %}
-      
-      
-</span>
+          <div class="subheading-grey"> {% include category.html %} </div>
           {% if page.subtitle %}
           <h2 class="subheading">{{ page.subtitle }}</h2>
           {% endif %}
-          <span class="meta float-right">Posted by
+          <span class="meta float-right"><small>Posted by
             <a href="/about">Arkadiusz Kuczorski</a>
-            on {{ page.date | date: '%B %d, %Y' }}</span>
+            on {{ page.date | date: '%B %d, %Y' }}</small></span>
         </div>
       </div>
     </div>
@@ -38,7 +35,6 @@ layout: default
       {{ content }}
 
       <hr>
-{% if post.title != 'Business' and post.title != 'Inspirations' and post.title != 'Technology' %}
       <div class="clearfix">
 
         {% if page.previous.url %}
@@ -49,7 +45,6 @@ layout: default
         {% endif %}
 
       </div>
-{% endif %}
     </div>
   </div>
 </div>
