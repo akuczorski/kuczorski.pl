@@ -3607,6 +3607,15 @@
   -webkit-animation-delay: 20s;
   animation-delay: 20s;
 }
+
+.animated.delay-21s {
+  -webkit-animation-delay: 21s;
+  animation-delay: 21s;
+}
+.animated.delay-22s {
+  -webkit-animation-delay: 22s;
+  animation-delay: 22s;
+}
 .animated.fast {
   -webkit-animation-duration: 800ms;
   animation-duration: 800ms;
