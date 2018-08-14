@@ -3602,6 +3602,14 @@
   -webkit-animation-delay: 15s;
   animation-delay: 15s;
 }
+.animated.delay-18s {
+  -webkit-animation-delay: 18s;
+  animation-delay: 18s;
+}
+.animated.delay-19s {
+  -webkit-animation-delay: 19s;
+  animation-delay: 19s;
+}
 
 .animated.delay-20s {
   -webkit-animation-delay: 20s;
